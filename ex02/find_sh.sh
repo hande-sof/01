@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f | grep -v ".sh" | cut -c 3-
+find . -type f -name "*.sh" -exec basename {} \; | sed -e 's/\.sh$//'
