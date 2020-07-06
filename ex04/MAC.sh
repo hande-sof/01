@@ -1,2 +1,2 @@
 !/bin/bash
-ifconfig -a link | grep ether | sed 's/ether//g' | tr -d ' '
+ifconfig -a link | grep ether | awk '{print $2}'
