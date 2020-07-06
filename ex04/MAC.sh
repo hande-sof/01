@@ -1,2 +1,2 @@
 !/bin/bash
-ifconfig -a | grep "ether " | cut -c 8- | tr -d ' '
+ifconfig -a link | grep ether | sed 's/ether//g' | tr -d ' '
